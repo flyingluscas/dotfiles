@@ -160,3 +160,4 @@ ln -sf "$DOTFILES_DIR/.zshrc" ~
 ln -sf "$DOTFILES_DIR/.exports" ~
 ln -sf "$DOTFILES_DIR/.aliases" ~
 ln -sf "$DOTFILES_DIR/.functions" ~
+ln -sf "$DOTFILES_DIR/gtk.css" ~/.config/gtk-3.0
