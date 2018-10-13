@@ -1,6 +1,7 @@
 [user]
   name = Lucas Pires
   email = lucas.pires.mattos@gmail.com
+  signingkey = F59732D724E825A5
 
 [github]
   user = flyingluscas
