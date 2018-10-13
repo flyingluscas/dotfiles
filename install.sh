@@ -26,6 +26,13 @@ if [[ ! -f /usr/bin/docker-compose ]]; then
   sudo pacman -S --noconfirm docker-compose
 fi
 
+# Install Steam
+if [[ ! -f /usr/bin/steam ]]; then
+  echo "Installing Steam..."
+  sudo pacman -S --noconfirm steam
+  yay -S --noconfirm steam-fonts
+fi
+
 # Install Fonts
 echo "Installing fonts..."
 sudo pacman -S --noconfirm \
