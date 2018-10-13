@@ -46,3 +46,15 @@ yay -S --noconfirm \
   ttf-emojione \
   ttf-emojione-color \
   ttf-twemoji-color
+
+# Install ZSH
+if [[ ! -f /usr/bin/zsh ]]; then
+  echo 'Installing ZSH...'
+  sudo pacman -S --noconfirm zsh
+fi
+
+# Install Oh My ZSH
+if [[ ! -d ~/.oh-my-zsh ]]; then
+  echo 'Installing Oh My ZSH...'
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
