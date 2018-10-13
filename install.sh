@@ -72,6 +72,9 @@ if [[ ! -f /usr/bin/subl ]]; then
   rm sublimehq-pub.gpg
   echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
   sudo pacman -Syu --noconfirm sublime-text
+  cd ~/.config/sublime-text-3/Packages
+  rm -r User
+  ln -s ~/Dropbox/Sublime/User
 fi
 
 # Install Fonts
