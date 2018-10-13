@@ -26,6 +26,12 @@ if [[ ! -f /usr/bin/docker-compose ]]; then
   sudo pacman -S --noconfirm docker-compose
 fi
 
+# Install Tilix
+if [[ ! -f /usr/bin/tilix ]]; then
+  echo "Installing Tilix..."
+  sudo pacman -S --noconfirm tilix
+fi
+
 # Install VLC
 if [[ ! -f /usr/bin/vlc ]]; then
   echo "Installing VLC..."
