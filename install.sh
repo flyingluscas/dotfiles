@@ -12,3 +12,16 @@ if [[ ! -f /usr/bin/yay ]]; then
   cd ~
   rm -Rf ~/yay
 fi
+
+# Install Docker
+if [[ ! -f /usr/bin/docker ]]; then
+  echo "Installing Docker..."
+  sudo pacman -S --noconfirm docker
+  sudo usermod -aG docker $USER
+fi
+
+# Install Docker Compose
+if [[ ! -f /usr/bin/docker-compose ]]; then
+  echo "Installing Docker Compose..."
+  sudo pacman -S --noconfirm docker-compose
+fi
