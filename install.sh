@@ -138,6 +138,12 @@ if [[ ! -d $ZSH_CUSTOM/themes/spaceship-prompt ]]; then
   ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 fi
 
+# Install ZSH Autosuggestions
+if [[ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]]; then
+  echo "Installing ZSH Autosuggestions..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+fi
+
 # Create Symlinks
 ln -sf "$DOTFILES_DIR/.gitconfig" ~
 ln -sf "$DOTFILES_DIR/.gitignore_global" ~
