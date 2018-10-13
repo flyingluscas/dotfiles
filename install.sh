@@ -58,3 +58,12 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
   echo 'Installing Oh My ZSH...'
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+
+# Install ZSH Spaceship Theme
+ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+
+if [[ ! -d $ZSH_CUSTOM/themes/spaceship-prompt ]]; then
+  echo "Installing Spaceship ZSH Theme..."
+  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+fi
