@@ -75,6 +75,7 @@ if [[ ! -f /usr/bin/subl ]]; then
   cd ~/.config/sublime-text-3/Packages
   rm -r User
   ln -s ~/Dropbox/Sublime/User
+  cd ~
 fi
 
 # Install Spotify
@@ -94,6 +95,14 @@ if [[ ! -f /usr/bin/slack ]]; then
   echo "Installing Slack..."
   yay -S --noconfirm slack-desktop
 fi
+
+# Install Powerline Fonts
+echo "Installing Powerline fonts..."
+git clone https://github.com/powerline/fonts.git ~/fonts
+cd ~/fonts
+./install.sh
+cd ~
+rm -Rf ~/fonts
 
 # Install Fonts
 echo "Installing fonts..."
