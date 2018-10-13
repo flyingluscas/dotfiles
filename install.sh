@@ -83,6 +83,12 @@ if [[ ! -f /usr/bin/spotify ]]; then
   yay -S --noconfirm spotify-stable
 fi
 
+# Install Google Chrome
+if [[ ! -f /usr/bin/google-chrome-stable ]]; then
+  echo "Installing Google Chrome..."
+  yay -S --noconfirm google-chrome
+fi
+
 # Install Fonts
 echo "Installing fonts..."
 sudo pacman -S --noconfirm \
