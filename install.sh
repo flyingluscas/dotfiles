@@ -103,12 +103,13 @@ sudo pacman -S --noconfirm \
   adobe-source-sans-pro-fonts \
   noto-fonts-emoji
 
-# Install Emoji Fonts
+# Install Fonts
 yay -S --noconfirm \
   ttf-symbola \
   ttf-emojione \
   ttf-emojione-color \
-  ttf-twemoji-color
+  ttf-twemoji-color \
+  otf-fira-code-git
 
 # Install ZSH
 if [[ ! -f /usr/bin/zsh ]]; then
