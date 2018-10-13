@@ -1,0 +1,13 @@
+[user]
+  name = Lucas Pires
+  email = lucas.pires.mattos@gmail.com
+
+[github]
+  user = flyingluscas
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+  filemode = false
+  trustctime = false
+    autocrlf = input
