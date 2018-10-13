@@ -51,6 +51,17 @@ if [[ ! -f /usr/bin/steam ]]; then
   yay -S --noconfirm steam-fonts
 fi
 
+# Install Sublime Text
+if [[ ! -f /usr/bin/subl ]]; then
+  echo "Installing Sublime Text..."
+  curl -O https://download.sublimetext.com/sublimehq-pub.gpg
+  sudo pacman-key --add sublimehq-pub.gpg
+  sudo pacman-key --lsign-key 8A8F901A
+  rm sublimehq-pub.gpg
+  echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
+  sudo pacman -Syu --noconfirm sublime-text
+fi
+
 # Install Fonts
 echo "Installing fonts..."
 sudo pacman -S --noconfirm \
