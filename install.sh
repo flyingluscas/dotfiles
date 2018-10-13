@@ -77,6 +77,12 @@ if [[ ! -f /usr/bin/subl ]]; then
   ln -s ~/Dropbox/Sublime/User
 fi
 
+# Install Spotify
+if [[ ! -f /usr/bin/spotify ]]; then
+  echo "Installing Spotify..."
+  yay -S --noconfirm spotify-stable
+fi
+
 # Install Fonts
 echo "Installing fonts..."
 sudo pacman -S --noconfirm \
