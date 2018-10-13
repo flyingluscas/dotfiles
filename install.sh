@@ -26,6 +26,12 @@ if [[ ! -f /usr/bin/docker-compose ]]; then
   sudo pacman -S --noconfirm docker-compose
 fi
 
+# Install VLC
+if [[ ! -f /usr/bin/vlc ]]; then
+  echo "Installing VLC..."
+  sudo pacman -S --noconfirm vlc
+fi
+
 # Install Steam
 if [[ ! -f /usr/bin/steam ]]; then
   echo "Installing Steam..."
