@@ -38,6 +38,12 @@ if [[ ! -f /usr/bin/vlc ]]; then
   sudo pacman -S --noconfirm vlc
 fi
 
+# Install Webtorrent Deskop
+if [[ ! -f /usr/bin/webtorrent-desktop ]]; then
+  echo "Installing Webtorrent Deskop..."
+  yay -S --noconfirm webtorrent-desktop
+fi
+
 # Install Steam
 if [[ ! -f /usr/bin/steam ]]; then
   echo "Installing Steam..."
