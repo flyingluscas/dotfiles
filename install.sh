@@ -57,6 +57,12 @@ if [[ ! -f /usr/bin/steam ]]; then
   yay -S --noconfirm steam-fonts
 fi
 
+# Install Dropbox
+if [[ ! -f /usr/bin/dropbox ]]; then
+  echo "Installing Dropbox..."
+  sudo pacman -S --noconfirm dropbox
+fi
+
 # Install Sublime Text
 if [[ ! -f /usr/bin/subl ]]; then
   echo "Installing Sublime Text..."
