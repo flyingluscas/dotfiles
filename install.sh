@@ -67,3 +67,11 @@ if [[ ! -d $ZSH_CUSTOM/themes/spaceship-prompt ]]; then
   git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
   ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 fi
+
+# Create Symlinks
+ln -sf "$DOTFILES_DIR/.gitconfig" ~
+ln -sf "$DOTFILES_DIR/.gitignore_global" ~
+ln -sf "$DOTFILES_DIR/.zshrc" ~
+ln -sf "$DOTFILES_DIR/.exports" ~
+ln -sf "$DOTFILES_DIR/.aliases" ~
+ln -sf "$DOTFILES_DIR/.functions" ~
