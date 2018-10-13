@@ -1,0 +1,18 @@
+function start-docker {
+  sudo systemctl start docker
+}
+
+function stop-docker {
+  sudo systemctl stop docker
+}
+
+function docker-cleanup {
+  docker ps -aq | xargs docker stop; docker ps -aq | xargs docker rm
+  docker rm -v $(docker ps -a -q -f status=exited); docker rmi $(docker images -f dangling=true -q)
+  docker volume ls -q -f dangling=true | xargs -r docker volume rm
+}
+
+function docker-cleanup-hard {
+  docker-cleanup
+  docker rmi $(docker images -q) -f
+}

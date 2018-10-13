@@ -1,0 +1,3 @@
+# Common shortcuts
+alias reload="source ~/.zshrc"
+alias rr="rm -rf"
