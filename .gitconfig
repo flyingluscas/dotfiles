@@ -11,3 +11,6 @@
   filemode = false
   trustctime = false
     autocrlf = input
+
+[commit]
+  gpgsign = true
