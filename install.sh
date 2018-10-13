@@ -13,6 +13,12 @@ if [[ ! -f /usr/bin/yay ]]; then
   rm -Rf ~/yay
 fi
 
+# Install Gnome Tweak Tool
+if [[ ! -f /usr/bin/gnome-tweaks ]]; then
+  echo "Installing Gnome Tweak Tool..."
+  sudo pacman -S --noconfirm gnome-tweak-tool
+fi
+
 # Install Docker
 if [[ ! -f /usr/bin/docker ]]; then
   echo "Installing Docker..."
