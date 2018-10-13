@@ -89,6 +89,12 @@ if [[ ! -f /usr/bin/google-chrome-stable ]]; then
   yay -S --noconfirm google-chrome
 fi
 
+# Install Slack
+if [[ ! -f /usr/bin/slack ]]; then
+  echo "Installing Slack..."
+  yay -S --noconfirm slack-desktop
+fi
+
 # Install Fonts
 echo "Installing fonts..."
 sudo pacman -S --noconfirm \
