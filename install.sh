@@ -97,12 +97,14 @@ if [[ ! -f /usr/bin/slack ]]; then
 fi
 
 # Install Powerline Fonts
-echo "Installing Powerline fonts..."
-git clone https://github.com/powerline/fonts.git ~/fonts
-cd ~/fonts
-./install.sh
-cd ~
-rm -Rf ~/fonts
+if [[ ! -f $HOME/.local/share/fonts/ter-powerline-x12b.pcf.gz ]]; then
+  echo "Installing Powerline fonts..."
+  git clone https://github.com/powerline/fonts.git ~/fonts
+  cd ~/fonts
+  ./install.sh
+  cd ~
+  rm -Rf ~/fonts
+fi
 
 # Install Fonts
 echo "Installing fonts..."
