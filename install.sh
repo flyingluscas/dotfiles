@@ -153,6 +153,9 @@ if [[ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]]; then
   git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
 fi
 
+# Load Tilix settings
+dconf load /com/gexperts/Tilix/ < "$DOTFILES_DIR/Tilix.dconf"
+
 # Create Symlinks
 ln -sf "$DOTFILES_DIR/.gitconfig" ~
 ln -sf "$DOTFILES_DIR/.gitignore_global" ~

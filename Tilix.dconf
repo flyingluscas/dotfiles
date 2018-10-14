@@ -1,0 +1,26 @@
+[/]
+copy-on-select=true
+warn-vte-config-issue=false
+terminal-title-show-when-single=false
+quake-specific-monitor=0
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+foreground-color='#A1B0B8'
+visible-name='Default'
+login-shell=true
+cell-width-scale=1.0
+palette=['#252525', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#D81B60', '#00ACC1', '#F5F5F5', '#708284', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#D81B60', '#00ACC1', '#F5F5F5']
+badge-color-set=false
+show-scrollbar=false
+cursor-shape='ibeam'
+cursor-colors-set=false
+highlight-colors-set=false
+cell-height-scale=1.2000000000000002
+bold-color-set=false
+font='Operator Mono Semi-Light 10'
+terminal-bell='none'
+scrollback-unlimited=true
+use-system-font=false
+use-theme-colors=false
+cursor-blink-mode='system'
+background-color='#222222222222'
