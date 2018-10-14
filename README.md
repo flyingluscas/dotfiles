@@ -13,6 +13,7 @@ Welcome to my dotfiles repository!
 - [Docker](https://www.docker.com)
 - [Dropbox](https://www.dropbox.com)
 - [Gnome Tweak Tool](https://www.archlinux.org/packages/extra/any/gnome-tweaks)
+- [GNOME](https://www.gnome.org)
 - [Google Chrome](https://www.google.com/chrome)
 - [Oh My Zsh](https://ohmyz.sh)
 - [Powerline Fonts](https://github.com/powerline/fonts)
