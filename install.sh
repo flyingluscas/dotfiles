@@ -6,11 +6,11 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Install YAY
 if [[ ! -f /usr/bin/yay ]]; then
   echo "Installing YAY..."
-  git clone https://aur.archlinux.org/yay.git ~/yay
-  cd ~/yay
+  git clone https://aur.archlinux.org/yay.git $HOME/yay
+  cd $HOME/yay
   makepkg -si --noconfirm --needed
-  cd ~
-  rm -Rf ~/yay
+  cd $HOME
+  rm -Rf $HOME/yay
 fi
 
 # Install Gnome Tweak Tool
@@ -72,10 +72,10 @@ if [[ ! -f /usr/bin/subl ]]; then
   rm sublimehq-pub.gpg
   echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
   sudo pacman -Syu --noconfirm --needed sublime-text
-  cd ~/.config/sublime-text-3/Packages
+  cd $HOME/.config/sublime-text-3/Packages
   rm -r User
-  ln -s ~/Dropbox/Sublime/User
-  cd ~
+  ln -s $HOME/Dropbox/Sublime/User
+  cd $HOME
 fi
 
 # Install Spotify
@@ -99,11 +99,11 @@ fi
 # Install Powerline Fonts
 if [[ ! -f $HOME/.local/share/fonts/ter-powerline-x12b.pcf.gz ]]; then
   echo "Installing Powerline fonts..."
-  git clone https://github.com/powerline/fonts.git ~/fonts
-  cd ~/fonts
+  git clone https://github.com/powerline/fonts.git $HOME/fonts
+  cd $HOME/fonts
   ./install.sh
-  cd ~
-  rm -Rf ~/fonts
+  cd $HOME
+  rm -Rf $HOME/fonts
 fi
 
 # Install Fonts
@@ -135,7 +135,7 @@ if [[ ! -f /usr/bin/zsh ]]; then
 fi
 
 # Install Oh My ZSH
-if [[ ! -d ~/.oh-my-zsh ]]; then
+if [[ ! -d $HOME/.oh-my-zsh ]]; then
   echo 'Installing Oh My ZSH...'
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
@@ -159,10 +159,10 @@ fi
 dconf load /com/gexperts/Tilix/ < "$DOTFILES_DIR/Tilix.dconf"
 
 # Create Symlinks
-ln -sf "$DOTFILES_DIR/.gitconfig" ~
-ln -sf "$DOTFILES_DIR/.gitignore_global" ~
-ln -sf "$DOTFILES_DIR/.zshrc" ~
-ln -sf "$DOTFILES_DIR/.exports" ~
-ln -sf "$DOTFILES_DIR/.aliases" ~
-ln -sf "$DOTFILES_DIR/.functions" ~
-ln -sf "$DOTFILES_DIR/gtk.css" ~/.config/gtk-3.0
+ln -sf "$DOTFILES_DIR/.gitconfig" $HOME
+ln -sf "$DOTFILES_DIR/.gitignore_global" $HOME
+ln -sf "$DOTFILES_DIR/.zshrc" $HOME
+ln -sf "$DOTFILES_DIR/.exports" $HOME
+ln -sf "$DOTFILES_DIR/.aliases" $HOME
+ln -sf "$DOTFILES_DIR/.functions" $HOME
+ln -sf "$DOTFILES_DIR/gtk.css" $HOME/.config/gtk-3.0
