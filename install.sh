@@ -8,7 +8,7 @@ if [[ ! -f /usr/bin/yay ]]; then
   echo "Installing YAY..."
   git clone https://aur.archlinux.org/yay.git ~/yay
   cd ~/yay
-  makepkg -si --noconfirm
+  makepkg -si --noconfirm --needed
   cd ~
   rm -Rf ~/yay
 fi
@@ -16,51 +16,51 @@ fi
 # Install Gnome Tweak Tool
 if [[ ! -f /usr/bin/gnome-tweaks ]]; then
   echo "Installing Gnome Tweak Tool..."
-  sudo pacman -S --noconfirm gnome-tweak-tool
+  sudo pacman -S --noconfirm --needed gnome-tweak-tool
 fi
 
 # Install Docker
 if [[ ! -f /usr/bin/docker ]]; then
   echo "Installing Docker..."
-  sudo pacman -S --noconfirm docker
+  sudo pacman -S --noconfirm --needed docker
   sudo usermod -aG docker $USER
 fi
 
 # Install Docker Compose
 if [[ ! -f /usr/bin/docker-compose ]]; then
   echo "Installing Docker Compose..."
-  sudo pacman -S --noconfirm docker-compose
+  sudo pacman -S --noconfirm --needed docker-compose
 fi
 
 # Install Tilix
 if [[ ! -f /usr/bin/tilix ]]; then
   echo "Installing Tilix..."
-  sudo pacman -S --noconfirm tilix
+  sudo pacman -S --noconfirm --needed tilix
 fi
 
 # Install VLC
 if [[ ! -f /usr/bin/vlc ]]; then
   echo "Installing VLC..."
-  sudo pacman -S --noconfirm vlc
+  sudo pacman -S --noconfirm --needed vlc
 fi
 
 # Install Webtorrent Deskop
 if [[ ! -f /usr/bin/webtorrent-desktop ]]; then
   echo "Installing Webtorrent Deskop..."
-  yay -S --noconfirm webtorrent-desktop
+  yay -S --noconfirm --needed webtorrent-desktop
 fi
 
 # Install Steam
 if [[ ! -f /usr/bin/steam ]]; then
   echo "Installing Steam..."
-  sudo pacman -S --noconfirm steam
-  yay -S --noconfirm steam-fonts
+  sudo pacman -S --noconfirm --needed steam
+  yay -S --noconfirm --needed steam-fonts
 fi
 
 # Install Dropbox
 if [[ ! -f /usr/bin/dropbox ]]; then
   echo "Installing Dropbox..."
-  sudo pacman -S --noconfirm dropbox
+  sudo pacman -S --noconfirm --needed dropbox
 fi
 
 # Install Sublime Text
@@ -71,7 +71,7 @@ if [[ ! -f /usr/bin/subl ]]; then
   sudo pacman-key --lsign-key 8A8F901A
   rm sublimehq-pub.gpg
   echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
-  sudo pacman -Syu --noconfirm sublime-text
+  sudo pacman -Syu --noconfirm --needed sublime-text
   cd ~/.config/sublime-text-3/Packages
   rm -r User
   ln -s ~/Dropbox/Sublime/User
@@ -81,19 +81,19 @@ fi
 # Install Spotify
 if [[ ! -f /usr/bin/spotify ]]; then
   echo "Installing Spotify..."
-  yay -S --noconfirm spotify-stable
+  yay -S --noconfirm --needed spotify-stable
 fi
 
 # Install Google Chrome
 if [[ ! -f /usr/bin/google-chrome-stable ]]; then
   echo "Installing Google Chrome..."
-  yay -S --noconfirm google-chrome
+  yay -S --noconfirm --needed google-chrome
 fi
 
 # Install Slack
 if [[ ! -f /usr/bin/slack ]]; then
   echo "Installing Slack..."
-  yay -S --noconfirm slack-desktop
+  yay -S --noconfirm --needed slack-desktop
 fi
 
 # Install Powerline Fonts
@@ -106,7 +106,7 @@ rm -Rf ~/fonts
 
 # Install Fonts
 echo "Installing fonts..."
-sudo pacman -S --noconfirm \
+sudo pacman -S --noconfirm --needed \
   ttf-roboto \
   ttf-liberation \
   ttf-ubuntu-font-family \
@@ -119,7 +119,7 @@ sudo pacman -S --noconfirm \
   noto-fonts-emoji
 
 # Install Fonts
-yay -S --noconfirm \
+yay -S --noconfirm --needed \
   ttf-symbola \
   ttf-emojione \
   ttf-emojione-color \
@@ -129,7 +129,7 @@ yay -S --noconfirm \
 # Install ZSH
 if [[ ! -f /usr/bin/zsh ]]; then
   echo 'Installing ZSH...'
-  sudo pacman -S --noconfirm zsh
+  sudo pacman -S --noconfirm --needed zsh
 fi
 
 # Install Oh My ZSH
