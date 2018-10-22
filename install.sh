@@ -60,7 +60,7 @@ fi
 # Install Dropbox
 if [[ ! -f /usr/bin/dropbox ]]; then
   echo "Installing Dropbox..."
-  sudo pacman -S --noconfirm --needed dropbox
+  yay -S --noconfirm --needed dropbox
 fi
 
 # Install Sublime Text
