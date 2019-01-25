@@ -50,17 +50,10 @@ if [[ ! -f /usr/bin/webtorrent-desktop ]]; then
   yay -S --noconfirm --needed webtorrent-desktop
 fi
 
-# Install Steam
-if [[ ! -f /usr/bin/steam ]]; then
-  echo "Installing Steam..."
-  sudo pacman -S --noconfirm --needed steam
-  yay -S --noconfirm --needed steam-fonts
-fi
-
-# Install Dropbox
-if [[ ! -f /usr/bin/dropbox ]]; then
-  echo "Installing Dropbox..."
-  yay -S --noconfirm --needed dropbox
+# Install MegaSync
+if [[ ! -f /usr/bin/megasync ]]; then
+  echo "Installing MegaSync..."
+  yay -S --noconfirm --needed megasync
 fi
 
 # Install Sublime Text
@@ -72,10 +65,6 @@ if [[ ! -f /usr/bin/subl ]]; then
   rm sublimehq-pub.gpg
   echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
   sudo pacman -Syu --noconfirm --needed sublime-text
-  cd $HOME/.config/sublime-text-3/Packages
-  rm -r User
-  ln -s $HOME/Dropbox/Sublime/User
-  cd $HOME
 fi
 
 # Install Spotify

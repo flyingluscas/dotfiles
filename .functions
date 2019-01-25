@@ -16,3 +16,8 @@ function docker-cleanup-hard {
   docker-cleanup
   docker rmi $(docker images -q) -f
 }
+
+function peerflix {
+  start-docker && \
+  docker run -p 8888:8888 --rm timfallmk/docker-peerflix $1
+}

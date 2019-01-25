@@ -11,7 +11,6 @@ Welcome to my dotfiles repository!
 
 - [Docker Compose](https://docs.docker.com/compose/overview)
 - [Docker](https://www.docker.com)
-- [Dropbox](https://www.dropbox.com)
 - [Gnome Tweak Tool](https://www.archlinux.org/packages/extra/any/gnome-tweaks)
 - [GNOME](https://www.gnome.org)
 - [Google Chrome](https://www.google.com/chrome)
@@ -20,7 +19,6 @@ Welcome to my dotfiles repository!
 - [Slack](https://slack.com)
 - [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt)
 - [Spotify](https://www.spotify.com)
-- [Steam](https://store.steampowered.com/about)
 - [Sublime Text](https://sublimetext.com)
 - [Tilix](https://gnunn1.github.io/tilix-web)
 - [VLC Media Player](https://www.videolan.org)
