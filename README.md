@@ -22,7 +22,6 @@ Welcome to my dotfiles repository!
 - [Sublime Text](https://sublimetext.com)
 - [Tilix](https://gnunn1.github.io/tilix-web)
 - [VLC Media Player](https://www.videolan.org)
-- [Web Torrent](https://webtorrent.io/desktop)
 - [Yay](https://github.com/Jguer/yay)
 - [ZSH Auto Suggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [ZSH](http://www.zsh.org)

@@ -44,18 +44,6 @@ if [[ ! -f /usr/bin/vlc ]]; then
   sudo pacman -S --noconfirm --needed vlc
 fi
 
-# Install Webtorrent Deskop
-if [[ ! -f /usr/bin/webtorrent-desktop ]]; then
-  echo "Installing Webtorrent Deskop..."
-  yay -S --noconfirm --needed webtorrent-desktop
-fi
-
-# Install MegaSync
-if [[ ! -f /usr/bin/megasync ]]; then
-  echo "Installing MegaSync..."
-  yay -S --noconfirm --needed megasync
-fi
-
 # Install Sublime Text
 if [[ ! -f /usr/bin/subl ]]; then
   echo "Installing Sublime Text..."
