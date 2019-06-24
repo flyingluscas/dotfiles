@@ -53,6 +53,11 @@ if [[ ! -f /usr/bin/subl ]]; then
   rm sublimehq-pub.gpg
   echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
   sudo pacman -Syu --noconfirm --needed sublime-text
+
+  # Sync configurations
+  rm -Rf ~/.config/sublime-text-3/Packages/User
+  mkdir -p ~/.config/sublime-text-3/Packages
+  git clone git@github.com:flyingluscas/dotfiles.git ~/.config/sublime-text-3/Packages/User
 fi
 
 # Install Spotify
