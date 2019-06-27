@@ -55,15 +55,13 @@ if [[ ! -f /usr/bin/subl ]]; then
   sudo pacman -Syu --noconfirm --needed sublime-text
 
   # Sync configurations
-  rm -Rf ~/.config/sublime-text-3/Packages/User
-  mkdir -p ~/.config/sublime-text-3/Packages
-  git clone git@github.com:flyingluscas/dotfiles.git ~/.config/sublime-text-3/Packages/User
+  ./sync-sublime-settings.sh
 fi
 
 # Install Spotify
 if [[ ! -f /usr/bin/spotify ]]; then
   echo "Installing Spotify..."
-  yay -S --noconfirm --needed spotify-stable
+  yay -S --noconfirm --needed spotify
 fi
 
 # Install Google Chrome
