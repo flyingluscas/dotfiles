@@ -61,6 +61,7 @@ fi
 # Install Spotify
 if [[ ! -f /usr/bin/spotify ]]; then
   echo "Installing Spotify..."
+  curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
   yay -S --noconfirm --needed spotify
 fi
 
