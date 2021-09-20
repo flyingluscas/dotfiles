@@ -19,7 +19,7 @@ Welcome to my dotfiles repository!
 - [Slack](https://slack.com)
 - [Spaceship ZSH](https://github.com/denysdovhan/spaceship-prompt)
 - [Spotify](https://www.spotify.com)
-- [Sublime Text](https://sublimetext.com)
+- [Visual Studio Code](https://code.visualstudio.com/)
 - [Tilix](https://gnunn1.github.io/tilix-web)
 - [VLC Media Player](https://www.videolan.org)
 - [Yay](https://github.com/Jguer/yay)

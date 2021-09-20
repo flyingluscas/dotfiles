@@ -6,6 +6,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Install YAY
 if [[ ! -f /usr/bin/yay ]]; then
   echo "Installing YAY..."
+  sudo pacman -S --noconfirm --needed base-devel
   git clone https://aur.archlinux.org/yay.git $HOME/yay
   cd $HOME/yay
   makepkg -si --noconfirm --needed
@@ -44,18 +45,10 @@ if [[ ! -f /usr/bin/vlc ]]; then
   sudo pacman -S --noconfirm --needed vlc
 fi
 
-# Install Sublime Text
-if [[ ! -f /usr/bin/subl ]]; then
-  echo "Installing Sublime Text..."
-  curl -O https://download.sublimetext.com/sublimehq-pub.gpg
-  sudo pacman-key --add sublimehq-pub.gpg
-  sudo pacman-key --lsign-key 8A8F901A
-  rm sublimehq-pub.gpg
-  echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
-  sudo pacman -Syu --noconfirm --needed sublime-text
-
-  # Sync configurations
-  ./sync-sublime-settings.sh
+# Install Visual Studio Code
+if [[ ! -f /usr/bin/code ]]; then
+  echo "Installing Visual Studio Code..."
+  yay -S --noconfirm --needed visual-studio-code-bin
 fi
 
 # Install Spotify
@@ -134,6 +127,12 @@ fi
 if [[ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]]; then
   echo "Installing ZSH Autosuggestions..."
   git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+fi
+
+# Install NVM
+if [[ ! -d $HOME/.nvm ]]; then
+  echo "Installing NVM..."
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 fi
 
 # Load Tilix settings
