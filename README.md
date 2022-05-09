@@ -25,6 +25,8 @@ Welcome to my dotfiles repository!
 - [Yay](https://github.com/Jguer/yay)
 - [ZSH Auto Suggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [ZSH](http://www.zsh.org)
+- [AWS CLI v2](https://aws.amazon.com/cli/)
+- [Terraform](https://www.terraform.io/cli)
 
 ## Usage
 

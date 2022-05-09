@@ -135,6 +135,12 @@ if [[ ! -d $HOME/.nvm ]]; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 fi
 
+# Install Gnome Themes Extra
+yay -S --noconfirm --needed gnome-themes-extra
+
+# Install AWS CLI v2 and Terraform
+yay -S --noconfirm --needed aws-cli-v2-bin terraform
+
 # Load Tilix settings
 dconf load /com/gexperts/Tilix/ < "$DOTFILES_DIR/Tilix.dconf"
 

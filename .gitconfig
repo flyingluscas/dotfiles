@@ -14,4 +14,4 @@
     autocrlf = input
 
 [commit]
-  gpgsign = true
+  gpgsign = false
