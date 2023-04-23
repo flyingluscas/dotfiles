@@ -1,3 +1,7 @@
+function system-upgrade {
+  sudo yay -Syu --noanswerupgrade --nodiffmenu --answerclean All
+}
+
 function start-docker {
   sudo systemctl start docker
 }

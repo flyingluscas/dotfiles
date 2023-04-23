@@ -102,6 +102,32 @@ yay -S --noconfirm --needed \
   ttf-twemoji-color \
   otf-fira-code-git
 
+# Install MacOS Fonts
+if [[ ! -d $HOME/.fonts ]]; then
+  echo 'Installing MacOS Fonts...'
+
+  mkdir $DOTFILES_DIR/fonts
+  mkdir $HOME/.fonts
+
+  curl -o $DOTFILES_DIR/fonts/SF-Pro.dmg https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg
+  curl -o $DOTFILES_DIR/fonts/SF-Mono.dmg https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg
+
+  yay -S --noconfirm --needed p7zip
+
+  7z -o$DOTFILES_DIR/fonts x $DOTFILES_DIR/fonts/SF-Pro.dmg
+  7z -o$DOTFILES_DIR/fonts/SFProFonts x $DOTFILES_DIR/fonts/SFProFonts/SF\ Pro\ Fonts.pkg
+  7z -o$DOTFILES_DIR/fonts/SFProFonts x $DOTFILES_DIR/fonts/SFProFonts/Payload\~
+
+  7z -o$DOTFILES_DIR/fonts x $DOTFILES_DIR/fonts/SF-Mono.dmg
+  7z -o$DOTFILES_DIR/fonts/SFMonoFonts x $DOTFILES_DIR/fonts/SFMonoFonts/SF\ Mono\ Fonts.pkg
+  7z -o$DOTFILES_DIR/fonts/SFMonoFonts x $DOTFILES_DIR/fonts/SFMonoFonts/Payload\~
+
+  mv --force $DOTFILES_DIR/fonts/SFProFonts/Library/Fonts/* $HOME/.fonts
+  mv --force $DOTFILES_DIR/fonts/SFMonoFonts/Library/Fonts/* $HOME/.fonts
+
+  rm -Rf $DOTFILES_DIR/fonts
+fi
+
 # Install ZSH
 if [[ ! -f /usr/bin/zsh ]]; then
   echo 'Installing ZSH...'
@@ -143,6 +169,9 @@ yay -S --noconfirm --needed aws-cli-v2-bin terraform
 
 # Load Tilix settings
 dconf load /com/gexperts/Tilix/ < "$DOTFILES_DIR/Tilix.dconf"
+
+# Load Gnome Settings
+dconf load /org/gnome/ < "$DOTFILES_DIR/Gnome.dconf"
 
 # Create Symlinks
 ln -sf "$DOTFILES_DIR/.gitconfig" $HOME

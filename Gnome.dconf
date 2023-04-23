@@ -1,0 +1,15 @@
+[desktop/interface]
+clock-show-weekday=true
+color-scheme='prefer-dark'
+document-font-name='SF Pro Rounded 11'
+font-antialiasing='rgba'
+font-hinting='slight'
+font-name='SF Pro Rounded 11'
+gtk-theme='Adwaita-dark'
+icon-theme='Adwaita'
+monospace-font-name='SF Mono 10'
+text-scaling-factor=1.0
+
+[desktop/wm/preferences]
+button-layout='appmenu:minimize,maximize,close'
+titlebar-font='SF Pro Rounded Bold 11'
