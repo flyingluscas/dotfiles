@@ -21,5 +21,12 @@ function docker-cleanup-hard {
   docker rmi $(docker images -q) -f
 }
 
+function push-tag {
+    git push --delete origin $1
+    git tag -d $1
+    git tag -a $1 -m "testing in staging"
+    git push origin $1
+}
+
 alias gpg_help=$'echo \'Create keys:   \t\tgpg --full-gen-key\\nExport public key:\tgpg --export  -a <user-id>\\nImport public key:\tgpg --import <pub.key>\\nEncryption: \t\tgpg -r <user-id> -e <file>\\nDecryption:\t\tgpg -d <file.gpg>\\nSign: \t\t\tgpg -s <file>\\nVerify:\t\t\tgpg --verify <file.sig>\\n\''
 alias lh='ls -lh'
